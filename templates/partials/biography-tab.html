@@ -1,0 +1,27 @@
+<div class="flexrow">
+  <div class="profile-img-container">
+    <img
+      class="profile-img"
+      src="{{actor.img}}"
+      data-edit="img"
+      title="{{actor.name}}"
+    />
+  </div>
+  <div class="advances">
+    <header class="header-field">
+      <span>{{ localize "SWADE.Adv" }}</span>
+    </header>
+    <div>
+      {{editor content=data.advances.details target="data.advances.details"
+      button=true owner=owner editable=editable}}
+    </div>
+  </div>
+</div>
+<div class="description">
+  <header class="header-field">
+    <span>{{ localize "SWADE.Desc" }}</span>
+  </header>
+  {{editor content=data.details.biography.value
+  target="data.details.biography.value" button=true owner=owner
+  editable=editable}}
+</div>

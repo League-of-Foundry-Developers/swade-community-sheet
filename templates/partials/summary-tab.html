@@ -1,0 +1,288 @@
+<section class="vitals flexrow">
+  <div class="vitals-container flexrow">
+    <div class="vitals-value flexcol">
+      <span class="vital-label">{{localize "SWADE.Wounds"}}</span>
+      <span class="flexrow">
+        <input
+          type="number"
+          value="{{data.wounds.value}}"
+          name="data.wounds.value"
+          data-dtype="Number"
+        />
+        <span class="max-value">/</span>
+        <input
+          type="number"
+          value="{{data.wounds.max}}"
+          data-dtype="Number"
+          disabled
+        />
+      </span>
+    </div>
+    <div class="vitals-value flexcol">
+      <span class="vital-label">{{localize "SWADE.Fatigue"}}</span>
+      <span class="flexrow">
+        <input
+          type="number"
+          value="{{data.fatigue.value}}"
+          name="data.fatigue.value"
+          data-dtype="Number"
+        />
+        <span class="max-value">/</span>
+        <input
+          type="number"
+          value="{{data.fatigue.max}}"
+          data-dtype="Number"
+          disabled
+        />
+      </span>
+    </div>
+  </div>
+  <div class="status-container">
+    <div class="status-item">
+      <label class="check-container"
+        >{{localize "SWADE.Shaken"}}
+        <input
+          type="checkbox"
+          name="data.status.isShaken"
+          {{checked
+          actor.data.status.isShaken}}
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="status-item">
+      <label class="check-container"
+        >{{localize "SWADE.Distr"}}
+        <input
+          type="checkbox"
+          name="data.status.isDistracted"
+          {{checked
+          actor.data.status.isDistracted}}
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="status-item">
+      <label class="check-container"
+        >{{localize "SWADE.Vuln"}}
+        <input
+          type="checkbox"
+          name="data.status.isVulnerable"
+          {{checked
+          actor.data.status.isVulnerable}}
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+  </div>
+  <div class="status-container">
+    <div class="status-item">
+      <label class="check-container"
+        >{{localize "SWADE.Stunned"}}
+        <input
+          type="checkbox"
+          name="data.status.isStunned"
+          {{checked
+          actor.data.status.isStunned}}
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="status-item">
+      <label class="check-container"
+        >{{localize "SWADE.Entangled"}}
+        <input
+          type="checkbox"
+          name="data.status.isEntangled"
+          {{checked
+          actor.data.status.isEntangled}}
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="status-item">
+      <label class="check-container"
+        >{{localize "SWADE.Bound"}}
+        <input
+          type="checkbox"
+          name="data.status.isBound"
+          {{checked
+          actor.data.status.isBound}}
+        />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+  </div>
+  <div class="bennies flexrow">
+    <div>
+      <a><i class="benny-subtract fas fa-minus"></i></a>
+    </div>
+    <div class="benny-tracker">
+      <span class="benny-label">{{localize "SWADE.Bennies"}}</span>
+      <input
+        class="bennies-current"
+        name="data.bennies.value"
+        type="number"
+        value="{{data.bennies.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div>
+      <a><i class="benny-add fas fa-plus"></i></a>
+    </div>
+  </div>
+</section>
+<section class="flexrow grid-row --grid-row-summary attributes-container">
+  {{> "modules/swade-community-sheet/templates/partials/attributes.html"}}
+  <div class="attributes secondary">
+    <header class="header-field">
+      <span>{{ localize "SWADE.Derived" }}</span>
+    </header>
+    <div class="flexrow attributes-list">
+      <div class="attribute flex2">
+        <div class="attribute-label">{{localize "SWADE.Size"}}</div>
+        <input
+          id="data.stats.size"
+          name="data.stats.size"
+          type="text"
+          value="{{data.stats.size}}"
+          data-dtype="Number"
+        />
+      </div>
+      <div class="attribute flex2">
+        <a class="running-die" title="{{localize 'SWADE.RollRun'}}"
+          ><div class="attribute-label">{{localize "SWADE.Pace"}}</div></a
+        >
+        <input
+          id="pace"
+          name="data.stats.speed.value"
+          type="text"
+          value="{{data.stats.speed.value}}"
+          placeholder="0"
+          data-dtype="Number"
+        />
+      </div>
+      <div class="attribute flex3">
+        <div class="attribute-label">{{localize "SWADE.Parry"}}</div>
+        <div class="toughness-block">
+          <input
+            id="parry"
+            name="data.stats.parry.value"
+            value="{{data.stats.parry.value}}"
+            type="text"
+            placeholder="0"
+            data-dtype="Number"
+            {{disabled
+            data.details.autoCalcParry}}
+          />
+          <div class="armor-value" alt="Parry modifier" data-target="parry">
+            {{signedString data.stats.parry.modifier}}
+          </div>
+        </div>
+      </div>
+      <div class="attribute flex3">
+        <div class="attribute-label">{{localize "SWADE.Tough"}}</div>
+        <div class="toughness-block">
+          <input
+            id="toughness"
+            name="data.stats.toughness.value"
+            type="text"
+            value="{{data.stats.toughness.value}}"
+            placeholder="{{localize 'SWADE.Tough'}}"
+            data-dtype="Number"
+            {{disabled
+            data.details.autoCalcToughness}}
+          />
+          <div class="armor-value" data-target="armor">
+            {{data.stats.toughness.armor}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="flexrow grid-row --grid-row-summary">
+  <div class="skills">
+    <header class="header-field flexrow">
+      <div>
+        <span>{{localize "SWADE.Skills"}}</span>
+      </div>
+      <div class="header-field-add">
+        <a class="item-create" data-type="skill"><i class="fa fa-plus"></i></a>
+      </div>
+    </header>
+    <ol class="skills-list resizable" data-base-size="390">
+      {{#each itemsByType.skill as |skill id|}}
+      <li class="item skill flexrow" data-item-id="{{skill._id}}">
+        <img class="skill-icon" src="{{skill.img}}" />
+        <label class="skill-label"
+          ><a title="{{localize 'SWADE.Roll'}}">{{skill.name}}</a></label
+        >
+        <div class="skill-value">
+          <span
+            ><a
+              class="item-control item-edit"
+              title="{{localize 'SWADE.EditSkill'}}"
+              >d{{skill.data.die.sides}}{{modifier skill.data.die.modifier}}</a
+            ></span
+          >
+        </div>
+        <div class="skill-attribute">
+          <span>{{localizeSkillAttribute skill.data.attribute}}</span>
+        </div>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+  <div class="gear resizable scrollable" data-base-size="435">
+    {{> "modules/swade-community-sheet/templates/setting-fields.html"}}
+    <header class="header-field flexrow">
+      <div>{{ localize "SWADE.Effects" }}</div>
+      <div class="header-field-add">
+        <a class="add-effect" data-transfer="false"
+          ><i class="fa fa-plus"></i
+        ></a>
+      </div>
+    </header>
+    {{> "modules/swade-community-sheet/templates/effect-list.html"}}
+    <header class="header-field flexrow" style="margin-top: 2px">
+      <div>{{ localize "SWADE.QuickAccess" }}</div>
+      <div class="header-field-add">
+        <a
+          class="item-create"
+          data-type="choice"
+          data-equipped="true"
+          data-choices="weapon,power,armor,shield"
+          ><i class="fa fa-plus"></i
+        ></a>
+      </div>
+    </header>
+    <div class="quickaccess-list">
+      <ol class="gear-list weapon-list">
+        {{#each itemsByType.weapon as |weapon id|}} {{#if weapon.data.equipped}}
+        {{>
+        "modules/swade-community-sheet/templates/partials/weapon-card.html"}}
+        {{/if}} {{/each}}
+      </ol>
+      {{#if hasArcaneBackground}}
+      <ol class="gear-list power-list">
+        {{#each itemsByType.power as |power id|}} {{#if power.data.equipped}}
+        {{>
+        "modules/swade-community-sheet/templates/partials/powers-card.html"}}
+        {{/if}} {{/each}}
+      </ol>
+      {{/if}}
+      <ol class="gear-list armor-list">
+        {{#each itemsByType.armor as |armor id|}} {{#if armor.data.equipped}}
+        {{> "modules/swade-community-sheet/templates/partials/armor-card.html"}}
+        {{/if}} {{/each}}
+      </ol>
+      <ol class="gear-list shield-list">
+        {{#each itemsByType.shield as |shield id|}} {{#if shield.data.equipped}}
+        {{>
+        "modules/swade-community-sheet/templates/partials/shield-card.html"}}
+        {{/if}} {{/each}}
+      </ol>
+    </div>
+  </div>
+</section>

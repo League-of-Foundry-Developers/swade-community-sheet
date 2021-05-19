@@ -1,0 +1,764 @@
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list .item-header, .swade-community-sheet.sheet.actor .sheet-body .header-field {
+  padding: 5px;
+  background: #972824;
+  border: 1px solid #293133;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  text-align: center;
+  color: #dfe6f5;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list .item-header .header-field-add, .swade-community-sheet.sheet.actor .sheet-body .header-field .header-field-add {
+  flex-grow: 0;
+  flex-basis: 15px;
+}
+
+.swade-community-sheet.sheet.actor.character .vitals .bennies .benny-tracker input, .swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute input, .swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute select, .swade-community-sheet-community-sheet.sheet input[type=text],
+.swade-community-sheet-community-sheet.sheet input[type=number] {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-header .item-image, .swade-community-sheet.sheet.actor .inventory .inventory-categories .item-image, .swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-header .item-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swade-community-sheet-community-sheet.sheet .window-content {
+  background-color: tan;
+}
+.swade-community-sheet-community-sheet.sheet .tabs {
+  border-bottom: 1px solid;
+}
+.swade-community-sheet-community-sheet.sheet .tabs .item {
+  border: 1px solid #2c4251;
+  background: #aca592;
+  border-radius: 4px 4px 0 0;
+  margin: 0 5px -1px;
+  padding: 4px;
+  color: #293133;
+}
+.swade-community-sheet-community-sheet.sheet .tabs .item:hover, .swade-community-sheet-community-sheet.sheet .tabs .item:focus {
+  background: #972824;
+  text-shadow: none;
+  color: #dfe6f5;
+}
+.swade-community-sheet-community-sheet.sheet .tabs .item.active {
+  background: #972824;
+  border-bottom: 0;
+  text-shadow: none;
+  color: #dfe6f5;
+}
+.swade-community-sheet-community-sheet.sheet .tabs .item:first-of-type {
+  margin-left: 0;
+}
+.swade-community-sheet-community-sheet.sheet .tabs .item:last-of-type {
+  margin-right: 0;
+}
+.scrollable {
+  overflow-x: auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+.effects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2px;
+}
+.effects-list li {
+  border-bottom: 1px solid #293133;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+.effects-list .effect-icon {
+  flex: 0 0 24px;
+  height: 24px;
+  margin-right: 2px;
+  border: none;
+}
+.effects-list .effect-label {
+  flex: 1;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.effects-list .effect-controls {
+  line-height: 24px;
+  flex: 0 0 60px;
+  text-align: center;
+}
+.effects-list .effect-controls a,
+.effects-list .effect-controls button {
+  cursor: pointer;
+}
+.effects-list .fa-power-off {
+  color: black;
+}
+.effects-list .disabled-effect .effect-label {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.item.skill .skill-icon {
+  max-height: 1em;
+  flex-grow: 0;
+  object-fit: contain;
+  margin-top: 0.3em;
+  margin-right: 0.1em;
+  border: none;
+}
+
+.swade-community-sheet.sheet.actor {
+  min-width: 660px;
+}
+.swade-community-sheet.sheet.actor .profile-img-container {
+  width: 150px;
+  max-width: 150px;
+  height: 150px;
+  margin-right: 2px;
+}
+.swade-community-sheet.sheet.actor .profile-img-container img {
+  margin: 0;
+  border: none;
+}
+.swade-community-sheet.sheet.actor .profile-img-container .profile-img {
+  height: inherit;
+  width: inherit;
+  object-fit: contain;
+  cursor: pointer;
+}
+.swade-community-sheet.sheet.actor .sheet-header > * {
+  flex: none;
+}
+.swade-community-sheet.sheet.actor .sheet-header .charline {
+  width: 100%;
+  display: flex;
+}
+.swade-community-sheet.sheet.actor .sheet-header .charline .charname {
+  flex: 3;
+  font-size: 40px;
+  height: 100%;
+  margin: 0;
+  border: 1px solid transparent;
+}
+.swade-community-sheet.sheet.actor .sheet-header .conviction {
+  text-align: center;
+  margin-left: 4px;
+  width: 20%;
+}
+.swade-community-sheet.sheet.actor .sheet-header .conviction .convction-toggle {
+  padding-top: 6px;
+}
+.swade-community-sheet.sheet.actor .sheet-header .conviction .conviction-counter {
+  width: 50%;
+}
+.swade-community-sheet.sheet.actor .sheet-header .conviction .pulse {
+  box-shadow: 0 0 0 0 black;
+  transform: scale(1);
+  border-radius: 5px;
+  animation: pulsating 2s infinite;
+  white-space: nowrap;
+}
+@keyframes pulsating {
+  0% {
+    transform: scale(0.95);
+    background: rgba(255, 0, 0, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    background: rgba(255, 0, 0, 0);
+    box-shadow: 0 0 0 8px rgba(255, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    background: rgba(255, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+.swade-community-sheet.sheet.actor .sheet-header .header-fields {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex: 1;
+  padding: 5px 0px;
+}
+.swade-community-sheet.sheet.actor .sheet-header .header-fields input {
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.swade-community-sheet.sheet.actor .sheet-header .header-fields input:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.swade-community-sheet.sheet.actor .sheet-header .header-stats {
+  align-content: space-around;
+  padding-left: 0;
+}
+.swade-community-sheet.sheet.actor .sheet-header .header-stats #xp-input {
+  margin-left: 2px;
+  text-align: center;
+}
+.swade-community-sheet.sheet.actor .sheet-header .header-stats div {
+  border: 1px solid transparent;
+  margin: 2px 0;
+  padding: 0 3px;
+  justify-content: center;
+}
+.swade-community-sheet.sheet.actor .status-container {
+  width: 20%;
+  flex-grow: 0;
+  flex-basis: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.swade-community-sheet.sheet.actor .status-container .status-item {
+  padding: 4px;
+}
+.swade-community-sheet.sheet.actor .vitals-container {
+  padding: 3px;
+}
+.swade-community-sheet.sheet.actor .vitals-container .vital-label {
+  line-height: 30px;
+  font-weight: bold;
+}
+.swade-community-sheet.sheet.actor .vitals-container input {
+  font-size: 30px;
+  height: 40px;
+  width: 20px;
+}
+.swade-community-sheet.sheet.actor .vitals-container .max-value {
+  font-size: 30px;
+}
+.swade-community-sheet.sheet.actor .vitals-container .vitals-value {
+  padding: 0 10px;
+}
+.swade-community-sheet.sheet.actor .sheet-body {
+  height: auto;
+}
+.swade-community-sheet.sheet.actor .sheet-body .tab {
+  height: 100%;
+}
+.swade-community-sheet.sheet.actor .sheet-body .editor {
+  border: 1px groove #293133;
+  border-top: none;
+  width: 100%;
+}
+.swade-community-sheet.sheet.actor .sheet-body .vitals {
+  text-align: center;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list {
+  margin-top: 4px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute {
+  margin: 0 2px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute .attribute-label {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: solid #444 2px;
+  margin-bottom: 2px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute .toughness-block {
+  display: flex;
+  flex-direction: row;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute .toughness-block input {
+  flex: 2;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute .toughness-block .armor-value {
+  flex: 1;
+  line-height: 27px;
+  font-weight: 600;
+  text-align: center;
+  background: url("/systems/swade/assets/icons/police-badge.svg") no-repeat center;
+  background-size: cover;
+  cursor: pointer;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute select {
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 28px;
+  text-align: center;
+  text-align-last: center;
+  -moz-text-align-last: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  font-weight: 600;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute select ::-ms-expand {
+  display: none;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute input {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 28px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes .attributes-list .attribute a.attribute-control {
+  border: none;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list {
+  overflow: auto;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .quickaccess-header {
+  line-height: 24px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .quickaccess-header h4 {
+  font-weight: 600;
+  text-indent: 10px;
+  margin: 0 0 0.2rem;
+  border-bottom: 1px solid grey;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .quickaccess-header .header-field-add {
+  flex-grow: 0;
+  flex-basis: 20px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card {
+  border: 1px solid #293133;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-header {
+  background: rgba(0, 0, 0, 0.2);
+  line-height: 20px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 25px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-header .item-name {
+  margin: 0;
+  text-indent: 20px;
+  font-weight: 600;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-header .item-image {
+  height: 25px;
+  flex-grow: 0;
+  flex-basis: 25px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-content {
+  border-top: 1px solid #293133;
+  background: rgba(255, 255, 255, 0.05);
+  line-height: 18px;
+  padding: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.swade-community-sheet.sheet.actor .sheet-body .quickaccess-list .gear-list .gear-card .card-content div {
+  flex-grow: 1;
+  flex-basis: 130px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .left-panel {
+  flex-basis: 250px;
+  flex-grow: 0;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes-container .attributes {
+  margin: 5px 0;
+}
+.swade-community-sheet.sheet.actor .sheet-body .attributes-container .secondary {
+  flex-grow: 0;
+  flex-basis: 250px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .skills .skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.swade-community-sheet.sheet.actor .sheet-body .gear .gear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.swade-community-sheet.sheet.actor .sheet-body .gear .gear-list li > * {
+  background: transparent;
+}
+.swade-community-sheet.sheet.actor .sheet-body .biography .advances {
+  padding: 2px;
+  margin: 5px 0;
+}
+.swade-community-sheet.sheet.actor .sheet-body .biography .advances .editor {
+  height: 165px;
+  padding: 3px;
+}
+.swade-community-sheet.sheet.actor .sheet-body .biography .description .editor {
+  height: 350px;
+  padding: 3px;
+}
+.swade-community-sheet.sheet.actor .grid-row {
+  display: grid;
+  grid-gap: 5px;
+}
+.swade-community-sheet.sheet.actor .grid-row.--grid-row-summary, .swade-community-sheet.sheet.actor .grid-row.--grid-row-npc-summary {
+  grid-template-columns: 55% 45%;
+}
+.swade-community-sheet.sheet.actor .additional-stats button {
+  width: 80%;
+  line-height: 22px;
+}
+.swade-community-sheet.sheet.actor .inventory {
+  margin: 3px 0;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-info {
+  line-height: 30px;
+}
+.swade-community-sheet.sheet.actor .inventory .currency {
+  display: inline;
+  vertical-align: top;
+}
+.swade-community-sheet.sheet.actor .inventory .currency input {
+  width: auto;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories {
+  height: 520px;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .items-section .header-field {
+  margin: 0;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-titles {
+  text-align: center;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-top: 1px;
+  padding-top: 2px;
+  font-weight: 300;
+  font-size: 12px;
+  background: #972824;
+  color: white;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-titles .item-name {
+  text-align: left;
+  text-indent: 8px;
+  flex-grow: 5;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list li {
+  padding: 0 2px;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list .item-header {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list .item {
+  line-height: 30px;
+  height: 30px;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list .item:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-list .item-name {
+  line-height: 30px;
+  height: 30px;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-equipped {
+  grid-area: item-equipped;
+  justify-self: center;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-image {
+  flex-basis: 30px;
+  height: 28px;
+  margin: 2px;
+  flex-grow: 0;
+  cursor: pointer;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-name {
+  text-indent: 8px;
+  text-align: left;
+  margin: 0;
+  flex-grow: 5;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  max-width: 180px;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-name:hover .item-image {
+  background-image: url(/icons/svg/d20-grey.svg) !important;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-name .item-image:hover {
+  background-image: url(/icons/svg/d20-black.svg) !important;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .field-longer {
+  text-indent: 8px;
+  text-align: left;
+  flex-grow: 3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .field-long {
+  flex-grow: 2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .field-short {
+  flex-grow: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-controls {
+  flex-basis: 60px;
+  flex-grow: 0;
+  text-align: right;
+  margin-right: 4px;
+}
+.swade-community-sheet.sheet.actor .inventory .inventory-categories .item-controls .item-unequipped {
+  color: rgba(0, 0, 0, 0.2);
+}
+.swade-community-sheet.sheet.actor .powers {
+  margin: 3px 0;
+}
+.swade-community-sheet.sheet.actor .powers .header-field-add {
+  line-height: 24px;
+  margin-left: 5px;
+}
+.swade-community-sheet.sheet.actor .powers .arcane-tabs {
+  display: flex;
+}
+.swade-community-sheet.sheet.actor .powers .arcane-tabs .arcane {
+  cursor: pointer;
+  width: 90px;
+  height: 24px;
+  text-align: center;
+  line-height: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: #972824;
+}
+.swade-community-sheet.sheet.actor .powers .arcane-tabs .arcane:hover, .swade-community-sheet.sheet.actor .powers .arcane-tabs .arcane:focus {
+  background: #3b3b3b;
+  text-shadow: none;
+}
+.swade-community-sheet.sheet.actor .powers .arcane-tabs .arcane.active {
+  background: #3b3b3b;
+}
+.swade-community-sheet.sheet.actor .powers .power-counter {
+  display: none;
+}
+.swade-community-sheet.sheet.actor .powers .power-counter input {
+  width: 40px;
+  color: #dfe6f5;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+}
+.swade-community-sheet.sheet.actor .powers .power-counter.active {
+  display: block;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list {
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power {
+  display: none;
+  margin: 2px;
+  flex-grow: 0;
+  flex-basis: calc(50% - 4px);
+  height: 250px;
+  border: 1px solid #293133;
+  border-top-left-radius: 4px;
+  border-radius: 2px;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power.active {
+  display: block;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-header {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #293133;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-header h4 {
+  margin: 0;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-header .item-image {
+  flex-grow: 0;
+  flex-basis: 25px;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-header .item-controls {
+  padding: 5px;
+  flex-grow: 0;
+  flex-wrap: nowrap;
+  color: black;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-header .item-controls a + a {
+  margin-left: 5px;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-header .item-controls .item-unequipped {
+  color: rgba(0, 0, 0, 0.2);
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-content {
+  margin: 0 3px;
+  line-height: 24px;
+  padding: 5px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-content .power-details {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  text-indent: 5px;
+}
+.swade-community-sheet.sheet.actor .powers .powers-list .power .power-content .power-description {
+  line-height: 15px;
+}
+
+.swade-community-sheet.sheet.actor.character {
+  min-height: 768px;
+}
+.swade-community-sheet.sheet.actor.character .profile-img-container {
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+  margin: 2px;
+}
+.swade-community-sheet.sheet.actor.character .vitals {
+  height: 80px;
+}
+.swade-community-sheet.sheet.actor.character .vitals .bennies {
+  flex-grow: 0;
+  flex-basis: 100px;
+  padding: 3px 10px;
+}
+.swade-community-sheet.sheet.actor.character .vitals .bennies i {
+  padding-top: 35px;
+}
+.swade-community-sheet.sheet.actor.character .vitals .bennies .benny-tracker .benny-label {
+  line-height: 30px;
+  font-weight: bold;
+}
+.swade-community-sheet.sheet.actor.character .vitals .bennies .benny-tracker input {
+  text-align: center;
+  border-radius: 0;
+}
+.swade-community-sheet.sheet.actor.character .vitals .bennies .benny-tracker .bennies-current {
+  font-size: 26px;
+  height: 35px;
+}
+.swade-community-sheet.sheet.actor.character .tab.active {
+  display: grid;
+  grid-gap: 5px;
+}
+.swade-community-sheet.sheet.actor.character .attributes-container .secondary {
+  flex-grow: 0;
+  flex-basis: 250px;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list {
+  height: 350px;
+  overflow: auto;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list .skill:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list .skill-label {
+  flex: 2;
+  overflow: hidden;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list .skill-label i {
+  display: none;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list .skill-label:hover i {
+  display: inline-block;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list .skill-value {
+  flex: 1;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list .skill-attribute {
+  flex-grow: 0;
+  flex-basis: 25px;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list li > * {
+  margin: 0 3px;
+  min-height: 28px;
+  line-height: 28px;
+}
+.swade-community-sheet.sheet.actor.character .skills .skills-list li a.attribute-control {
+  border: none;
+}
+.swade-community-sheet.sheet.actor.character .additional-stats {
+  max-height: 84px;
+  overflow-x: auto;
+}
+.swade-community-sheet.sheet.actor.character .quickaccess-list {
+  overflow-x: auto;
+}
+.swade-community-sheet.sheet.actor.character .gear .gear-list .gear-card {
+  margin: 2px 0;
+  border-top-left-radius: 4px;
+}
+.swade-community-sheet.sheet.actor.character .gear .gear-list .gear-card .card-header .item-controls {
+  flex: 0 0 20px;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list {
+  margin: 5px 0 0;
+  padding: 2px;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .hindrances {
+  height: 120px;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .special-abilities {
+  height: 100px;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .items-list {
+  overflow: auto;
+  list-style: none;
+  margin: 0 0 7px;
+  padding: 0;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .items-list .item {
+  height: 30px;
+  line-height: 24px;
+  padding: 3px 0;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .items-list .item img {
+  flex: 0 0 24px;
+  margin-right: 5px;
+  border: none;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .items-list .item:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .items-list .item-name {
+  margin: 0;
+  height: 30px;
+  overflow: hidden;
+  word-break: break-all;
+}
+.swade-community-sheet.sheet.actor.character .edges .edges-hindrances-list .items-list .item-controls {
+  flex: 0 0 36px;
+}
+.swade-community-sheet.sheet.actor.character .edges .description {
+  margin: 5px 0;
+  padding: 2px;
+}
+.swade-community-sheet.sheet.actor.character .edges .description .description-value {
+  overflow: auto;
+  padding: 5px;
+  margin: 0;
+}

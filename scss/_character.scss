@@ -1,0 +1,161 @@
+.swade-community-sheet.sheet.actor.character {
+  min-height: 768px;
+  .profile-img-container {
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+    margin: $small-spacing;
+  }
+
+  .vitals {
+    height: 80px;
+    .bennies {
+      flex-grow: 0;
+      flex-basis: 100px;
+      padding: 3px 10px;
+      i {
+        padding-top: 35px;
+      }
+      .benny-tracker {
+        .benny-label {
+          line-height: 30px;
+          font-weight: bold;
+        }
+        input {
+          @extend %standalone-input-field;
+          text-align: center;
+          border-radius: 0;
+        }
+        .bennies-current {
+          font-size: 26px;
+          height: 35px;
+        }
+      }
+    }
+  }
+
+  .tab.active {
+    display: grid;
+    grid-gap: $grid-gap;
+  }
+
+  // Summary
+  .attributes-container {
+    .secondary {
+      flex-grow: 0;
+      flex-basis: 250px;
+    }
+  }
+
+  .skills {
+    .skills-list {
+      height: 350px;
+      overflow: auto;
+      .skill:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .skill-label {
+        flex: 2;
+        overflow: hidden;
+        i {
+          display: none;
+        }
+        &:hover {
+          i {
+            display: inline-block;
+          }
+        }
+      }
+      .skill-value {
+        flex: 1;
+      }
+      .skill-attribute {
+        flex-grow: 0;
+        flex-basis: 25px;
+      }
+      li {
+        > * {
+          margin: 0 3px;
+          min-height: 28px;
+          line-height: 28px;
+        }
+        a.attribute-control {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .additional-stats {
+    max-height: 84px;
+    overflow-x: auto;
+  }
+
+  .quickaccess-list {
+    overflow-x: auto;
+  }
+
+  .gear {
+    .gear-list {
+      .gear-card {
+        margin: $small-spacing 0;
+        border-top-left-radius: 4px;
+        .card-header .item-controls {
+          flex: 0 0 20px;
+        }
+      }
+    }
+  }
+
+  // Edges
+  .edges {
+    .edges-hindrances-list {
+      margin: 5px 0 0;
+      padding: 2px;
+      .hindrances {
+        height: 120px;
+      }
+      .special-abilities {
+        height: 100px;
+      }
+      .items-list {
+        overflow: auto;
+        list-style: none;
+        margin: 0 0 7px;
+        padding: 0;
+        .item {
+          height: 30px;
+          line-height: 24px;
+          padding: 3px 0;
+          img {
+            flex: 0 0 24px;
+            margin-right: 5px;
+            border: none;
+          }
+          &:nth-child(even) {
+            background: rgba(0, 0, 0, 0.1);
+          }
+        }
+        .item-name {
+          margin: 0;
+          height: 30px;
+          overflow: hidden;
+          word-break: break-all;
+        }
+        .item-controls {
+          flex: 0 0 36px;
+        }
+      }
+    }
+
+    .description {
+      margin: 5px 0;
+      padding: 2px;
+      .description-value {
+        overflow: auto;
+        padding: 5px;
+        margin: 0;
+      }
+    }
+  }
+}

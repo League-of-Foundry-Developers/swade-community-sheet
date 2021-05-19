@@ -1,0 +1,105 @@
+.swade-community-sheet-community-sheet.sheet {
+  .window-content {
+    background-color: tan;
+  }
+
+  // Content Tabs
+  .tabs {
+    border-bottom: 1px solid;
+
+    .item {
+      border: 1px solid $charcoal;
+      background: $input-bg-dark;
+      border-radius: 4px 4px 0 0;
+      margin: 0 5px -1px;
+      padding: 4px;
+      color: $anthracite;
+      &:hover,
+      &:focus {
+        background: $header-text;
+        text-shadow: none;
+        color: $light-pastel-blue;
+      }
+      &.active {
+        background: $header-text;
+        border-bottom: 0;
+        text-shadow: none;
+        color: $light-pastel-blue;
+      }
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  input[type='text'],
+  input[type='number'] {
+    @extend %standalone-input-field;
+  }
+}
+
+.scrollable {
+  overflow-x: auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+.effects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: $small-spacing;
+  li {
+    border-bottom: $decorative-line;
+    padding-bottom: $small-spacing;
+    margin-bottom: $small-spacing;
+  }
+  .effect-icon {
+    flex: 0 0 24px;
+    height: 24px;
+    margin-right: $small-spacing;
+    border: none;
+  }
+  .effect-label {
+    flex: 1;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .effect-controls {
+    line-height: 24px;
+    flex: 0 0 60px;
+    text-align: center;
+
+    a,
+    button {
+      cursor: pointer;
+    }
+  }
+  .fa-power-off {
+    color: black;
+  }
+
+  .disabled-effect {
+    .effect-label {
+      text-decoration: line-through;
+      text-decoration-thickness: $small-spacing;
+    }
+  }
+}
+
+.item.skill {
+  .skill-icon {
+    max-height: 1em;
+    flex-grow: 0;
+    object-fit: contain;
+    margin-top: 0.3em;
+    margin-right: 0.1em;
+    border: none;
+  }
+}

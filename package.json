@@ -1,0 +1,14 @@
+{
+  "name": "swade-community-sheet",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "css": "gulp css"
+  },
+  "author": "League of Extraordinary FoundryVTT Developers",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2"
+  }
+}

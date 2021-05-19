@@ -1,0 +1,58 @@
+$light-grey: rgba(0, 0, 0, 0.2);
+$eggshell: #eeede0;
+$anthracite: #293133;
+$dark-paste-blue: #779ecb;
+$light-pastel-blue: #dfe6f5;
+$charcoal: #2c4251;
+$lapis-lazuli: #33658a;
+
+$header-text: rgba(151, 40, 36, 1);
+$input-bg-light: rgba(203, 192, 175, 1);
+$input-bg-dark: rgba(172, 165, 146, 1);
+$light-grey: rgba(59, 59, 59, 0.5);
+$dark-grey: rgba(59, 59, 59, 1);
+
+$decorative-line: 1px solid $anthracite;
+$section-border: 1px groove $anthracite;
+$solid-line: 2px solid $light-grey;
+
+//Spacing variables
+$small-spacing: 2px;
+$medium-spacing: 5px;
+$large-spacing: 10px;
+
+//font-sizes
+$smallest-font: 0.9em;
+$small-font: 14px;
+$medium-font: 1.15em;
+$large-font: 1.75em;
+$section-header: 1.5em;
+
+//Grid variables
+$grid-gap: $medium-spacing;
+
+%header-field {
+  padding: 5px;
+  background: $header-text;
+  border: $decorative-line;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  text-align: center;
+  color: $light-pastel-blue;
+  .header-field-add {
+    flex-grow: 0;
+    flex-basis: 15px;
+  }
+}
+
+%standalone-input-field {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+%item-background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
