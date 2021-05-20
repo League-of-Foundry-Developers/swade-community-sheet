@@ -10,6 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install dependencies
+        run: npm ci
+
       # get part of the tag after the `v`
       - name: Extract tag version number
         id: get_version
@@ -26,6 +34,10 @@ jobs:
           url: https://github.com/${{github.repository}}
           manifest: https://github.com/${{github.repository}}/releases/latest/download/module.json
           download: https://github.com/${{github.repository}}/releases/download/${{steps.get_version.outputs.version}}/module.zip
+
+      # Lint the files
+      - name: Construct CSS
+        run: npm run css
 
       # Lint the files
       - name: Lint Files
