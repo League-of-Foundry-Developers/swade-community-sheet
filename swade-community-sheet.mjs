@@ -1,4 +1,4 @@
-import SwadeCharacterSheet from './module/SwadeCharacterSheet';
+import SwadeCharacterSheet from './module/SwadeCharacterSheet.mjs';
 
 Hooks.on('init', () => {
   Actors.registerSheet('swade-community-sheet', SwadeCharacterSheet, {

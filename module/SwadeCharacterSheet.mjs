@@ -1,4 +1,4 @@
-import SwadeBaseActorSheet from './SwadeBaseActorSheet.js';
+import SwadeBaseActorSheet from './SwadeBaseActorSheet.mjs';
 export default class SwadeCharacterSheet extends SwadeBaseActorSheet {
   /**
    * Extend and override the default options used by the Actor Sheet
