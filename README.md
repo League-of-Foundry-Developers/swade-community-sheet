@@ -11,6 +11,7 @@ https://github.com/League-of-Foundry-Developers/swade-community-sheet/releases/l
 ```
 
 ## Known Issues
+-
 
 ## Acknowledgements
 

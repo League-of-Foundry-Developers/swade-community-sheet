@@ -28,4 +28,10 @@ npm run css
 
 With the Gulp CLI installed, you can engage watch mode by simply running `gulp` from the root of the project.
 
+## Release
+
+To release a new version, this repository leverages Github Actions to construct a module.json and module.zip and attach those to a created Github Release. Simply create a new release from the Github UI and all the rest will be handled for you. For more information, check out the documentation [here](https://github.com/League-of-Foundry-Developers/FoundryVTT-Module-Template).
+
+The benefits of this setup are explained in detail on the [Foundry Wiki](https://foundryvtt.wiki/en/development/guides/releases-and-history).
+
 ## Pull Requests are welcome!
