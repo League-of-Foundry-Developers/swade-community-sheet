@@ -104,7 +104,7 @@ export default class SwadeBaseActorSheet extends ActorSheet {
       this._filterPowers(html, arcane);
     });
     //Running Die
-    html.find('.running-die').on('click', (ev) => {
+    html.find('.running-die').on('click', () => {
       const runningDie = getProperty(
         this.actor.data,
         'data.stats.speed.runningDie',

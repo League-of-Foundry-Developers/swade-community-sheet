@@ -1,7 +1,7 @@
 <div class="flexrow inventory-info">
   <span
     >{{localize "SWADE.CarryWeight"}}
-    <span style="font-weight: bold;"
+    <span style="font-weight: bold"
       >{{inventoryWeight}} / {{maxCarryCapacity}}</span
     ></span
   >
@@ -20,9 +20,7 @@
   {{!-- This is melee weapons only --}}
   <div class="items-section">
     <li class="item-titles flexrow melee-columns">
-      <div class="item-name">
-        {{localize "SWADE.MeleeWeapons"}}
-      </div>
+      <div class="item-name">{{localize "SWADE.MeleeWeapons"}}</div>
       <div class="field-long">{{localize "SWADE.Dmg"}}</div>
       <div class="field-short">{{localize "SWADE.Ap"}}</div>
       <div class="field-long">{{localize "SWADE.Notes"}}</div>
@@ -53,15 +51,11 @@
             >{{item.data.damage}}</a
           >
         </div>
-        <div class="field-short">
-          {{item.data.ap}}
-        </div>
+        <div class="field-short">{{item.data.ap}}</div>
         <div class="field-long" title="{{item.data.notes}}">
           {{item.data.notes}}
         </div>
-        <div class="field-short">
-          {{item.data.weight}}
-        </div>
+        <div class="field-short">{{item.data.weight}}</div>
         <div class="item-controls">
           {{#if ../owner}}
           <a
@@ -88,9 +82,7 @@
   <div class="items-section">
     {{!-- This is ranged weapons only --}}
     <li class="item-titles flexrow">
-      <div class="item-name">
-        {{localize "SWADE.RangedWeapons"}}
-      </div>
+      <div class="item-name">{{localize "SWADE.RangedWeapons"}}</div>
       <div class="field-long">{{localize "SWADE.Rng"}}</div>
       <div class="field-long">{{localize "SWADE.Dmg"}}</div>
       <div class="field-short">{{localize "SWADE.Ap"}}</div>
@@ -123,29 +115,21 @@
             (x{{item.data.quantity}}) {{/if}}
           </h4>
         </div>
-        <div class="field-long">
-          {{item.data.range}}
-        </div>
+        <div class="field-long">{{item.data.range}}</div>
         <div class="field-long">
           <a class="damage-roll" title="{{localize 'SWADE.Roll'}}"
             >{{item.data.damage}}</a
           >
         </div>
-        <div class="field-short">
-          {{item.data.ap}}
-        </div>
-        <div class="field-short">
-          {{item.data.rof}}
-        </div>
+        <div class="field-short">{{item.data.ap}}</div>
+        <div class="field-short">{{item.data.rof}}</div>
         <div
           class="field-long"
           title="{{item.data.currentShots}} / {{item.data.shots}}"
         >
           {{item.data.currentShots}} / {{item.data.shots}}
         </div>
-        <div class="field-short">
-          {{item.data.weight}}
-        </div>
+        <div class="field-short">{{item.data.weight}}</div>
         <div class="item-controls">
           {{#if ../owner}}
           <a
@@ -194,18 +178,12 @@
             (x{{item.data.quantity}}) {{/if}}
           </h4>
         </div>
-        <div class="field-short">
-          {{item.data.armor}}
-        </div>
-        <div class="field-short">
-          {{item.data.minStr}}
-        </div>
+        <div class="field-short">{{item.data.armor}}</div>
+        <div class="field-short">{{item.data.minStr}}</div>
         <div class="field-long" title="{{item.data.notes}}">
           {{item.data.notes}}
         </div>
-        <div class="field-short">
-          {{item.data.weight}}
-        </div>
+        <div class="field-short">{{item.data.weight}}</div>
         <div class="item-controls">
           {{#if ../owner}}
           <a
@@ -254,18 +232,10 @@
             (x{{item.data.quantity}}) {{/if}}
           </h4>
         </div>
-        <div class="field-short">
-          {{item.data.parry}}
-        </div>
-        <div class="field-short">
-          {{item.data.cover}}
-        </div>
-        <div class="field-short">
-          {{item.data.minStr}}
-        </div>
-        <div class="field-short">
-          {{item.data.weight}}
-        </div>
+        <div class="field-short">{{item.data.parry}}</div>
+        <div class="field-short">{{item.data.cover}}</div>
+        <div class="field-short">{{item.data.minStr}}</div>
+        <div class="field-short">{{item.data.weight}}</div>
         <div class="item-controls">
           {{#if ../owner}}
           <a
@@ -306,16 +276,10 @@
             class="item-image"
             style="background-image: url({{item.img}})"
           ></div>
-          <h4 title="{{item.name}}">
-            {{item.name~}}
-          </h4>
+          <h4 title="{{item.name}}">{{item.name~}}</h4>
         </div>
-        <div class="field-short">
-          {{item.data.quantity}}
-        </div>
-        <div class="field-short">
-          {{item.data.weight}}
-        </div>
+        <div class="field-short">{{item.data.quantity}}</div>
+        <div class="field-short">{{item.data.weight}}</div>
         <div class="item-controls">
           {{#if ../owner}} {{#if item.data.equippable}}
           <a

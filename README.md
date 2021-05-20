@@ -2,7 +2,6 @@
 
 The SWADE community sheet is the community effort to continuing support for the legacy SWADE player character sheet.
 
-
 ## Installation
 
 Module JSON:
@@ -12,7 +11,6 @@ https://github.com/League-of-Foundry-Developers/swade-community-sheet/releases/l
 ```
 
 ## Known Issues
-
 
 ## Acknowledgements
 

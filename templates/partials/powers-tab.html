@@ -87,24 +87,16 @@
       <div class="power-details">
         <div class="flexrow">
           {{#if power.data.rank}}
-          <div>
-            {{localize 'SWADE.Rank'}}: {{power.data.rank}}
-          </div>
+          <div>{{localize 'SWADE.Rank'}}: {{power.data.rank}}</div>
           {{/if}} {{#if power.data.pp}}
-          <div>
-            {{power.data.pp}} PP
-          </div>
+          <div>{{power.data.pp}} PP</div>
           {{/if}}
         </div>
         <div class="flexrow">
           {{#if power.data.range}}
-          <div>
-            {{localize 'SWADE.Rng'}}: {{power.data.range}}
-          </div>
+          <div>{{localize 'SWADE.Rng'}}: {{power.data.range}}</div>
           {{/if}} {{#if power.data.duration}}
-          <div>
-            {{localize 'SWADE.Dur'}}: {{power.data.duration}}
-          </div>
+          <div>{{localize 'SWADE.Dur'}}: {{power.data.duration}}</div>
           {{/if}}
         </div>
         {{#if power.data.damage.length}}
@@ -114,9 +106,7 @@
         </div>
         {{/if}}
       </div>
-      <div class="power-description">
-        {{enrich power.data.description}}
-      </div>
+      <div class="power-description">{{enrich power.data.description}}</div>
     </div>
   </div>
   {{/each}}
