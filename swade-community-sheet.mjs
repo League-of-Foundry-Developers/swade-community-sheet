@@ -13,6 +13,7 @@ async function preloadHandlebarsTemplates() {
   const templatePaths = [
     //Character Sheet
     'modules/swade-community-sheet/templates/character-sheet.html',
+    'modules/swade-community-sheet/templates/effect-list.html',
     'modules/swade-community-sheet/templates/partials/attributes.html',
     'modules/swade-community-sheet/templates/partials/summary-tab.html',
     'modules/swade-community-sheet/templates/partials/edges-tab.html',
