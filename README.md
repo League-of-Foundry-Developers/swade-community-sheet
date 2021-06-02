@@ -19,4 +19,4 @@ This sheet used to be part of the [Core SWADE package](https://gitlab.com/peginc
 
 ## Contributing
 
-See [CONTRIBUTING](contributing.md) for how you can help.
+See [CONTRIBUTING](CONTRIBUTING.md) for how you can help.
